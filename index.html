@@ -12,6 +12,7 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Red+Hat+Display:wght@500;700;900&display=swap');
 
     * {
       margin: 0;
@@ -21,6 +22,14 @@
     body {
       background-color: hsl(225, 100%, 94%);
       margin: 50px 25px;
+    }
+    h2, h4, p, a {
+      font-family: 'Red Hat Display', sans-serif;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      color: gray;
     }
 
     #content-cont {
@@ -39,35 +48,56 @@
     }
     /* order summary styling */
     #order-summary p {
-      padding: 20px 30px;
-      line-height: 20px;
+      padding: 20px 30px 15px;
+      line-height: 27px;
     }
     /* plan type cont styling */
     #plan-type-cont {
       display: flex;
       justify-content: space-around;
-      border-radius: 20px;
-      padding: 30px 20px;
-      margin: 20px 20px;
-      background-color: aqua;
-        /* backgorun color needs to be added */
+      border-radius: 10px;
+      padding: 15px 10px;
+      margin: 0 20px 30px;
+      background-color: hsl(222, 57%, 95%);
+    }
+    #plan-type-cont img {
+      margin-left: -10px;
+        /* did this to keep space on the outer edeged the same while making the #type-price closer to the img */
+    }
+    #plan-type-cont #type-price {
+      line-height: 23px;
+      margin-left: -25px;
+        /* did this to keep space on the outer edeged the same while making the #type-price closer to the img */
+    }
+    #type-price p {
+      font-weight: 300;
+      text-align: left;
     }
     #plan-type-cont a {
       align-self: center;
+      color: hsl(245, 75%, 52%);
+      font-size: small;
+      font-weight: 700;
     }
     /* payment link styling to make look like  button */
     #payment-button {
+      background-color: hsl(245, 75%, 52%);
+      padding: 15px 10px;
+      border-radius: 10px;
+      margin: auto 20px 25px;
+      box-shadow: 10px 10px 10px black;
+        /* i just like the way this looked. not part of the design */
+    }
+    #button {
       text-decoration: none;
       color: white;
-      background-color: hsl(245, 75%, 52%);
-      padding: 10px 10px;
-      border-radius: 10px;
-      margin: auto 20px 20px;
     }
     /* cancle order styling */
-    #cancel-button {
+    #cancel {
       text-decoration: none;
       margin-bottom: 20px;
+      color: grey;
+      font-weight: 900;
     }
   </style>
 </head>
@@ -77,7 +107,7 @@
     <img id="hero-img" src="images/illustration-hero.svg" alt="girl dancing">
     
     <div id="order-summary">
-      <h1>Order Summary</h1>
+      <h2>Order Summary</h2>
       <p>You can now listen to millions of songs, audiobooks, and podcasts on any 
         device anywhere you like!</p>
     </div>
@@ -85,19 +115,19 @@
     <div id="plan-type-cont">
       <img id="music-logo" src="images/icon-music.svg" alt="music logo">
       
-      <div>
-        <h2>Annual Plan</h2>
+      <div id="type-price">
+        <h4>Annual Plan</h4>
         <p>$59.99/year</p>
       </div>
 
       <a href="#">Change</a>
     </div>
     <div id="payment-button">
-      <a href="#">Proceed to Payment</a>
+      <a id="button" href="#">Proceed to Payment</a>
     </div>  
     
     <div id="cancel-button">
-      <a href="#">Cancel Order</a>
+      <a id="cancel" href="#">Cancel Order</a>
     </div>  
   </div>
   
