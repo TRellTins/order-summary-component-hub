@@ -20,8 +20,10 @@
       box-sizing: border-box;
     }
     body {
-      background-color: hsl(225, 100%, 94%);
       margin: 50px 25px;
+      background-image: url(images/pattern-background-mobile.svg);
+      background-repeat: no-repeat;
+      background-size: 1000%;
     }
     h2, h4, p, a {
       font-family: 'Red Hat Display', sans-serif;
@@ -38,7 +40,7 @@
       width: 325px;
       text-align: center;
       padding-bottom: 15px;
-      margin-bottom: 20px;
+      margin: 10% auto;  
     }
     /* hero img styling */
     #hero-img {
@@ -79,6 +81,10 @@
       font-size: small;
       font-weight: 700;
     }
+    #plan-type-cont a:hover {
+      color: hsl(228, 51%, 53%);
+      text-decoration: none;
+    }
     /* payment link styling to make look like  button */
     #payment-button {
       background-color: hsl(245, 75%, 52%);
@@ -87,6 +93,9 @@
       margin: auto 20px 25px;
       box-shadow: 10px 10px 10px black;
         /* i just like the way this looked. not part of the design */
+    }
+    #payment-button:hover {
+      background-color: hsl(228, 45%, 44%);
     }
     #button {
       text-decoration: none;
@@ -98,6 +107,18 @@
       margin-bottom: 20px;
       color: grey;
       font-weight: 900;
+    }
+    #cancel:hover {
+      color: black;
+    }
+    /* desktop view */
+    @media only screen and (min-width: 1440px) {
+      body {
+        background-image: url(images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+          /* not exactly what the design shows, but can't change the bottom white part to match the color of the design, so made it like this so that it would look better */
+      }
     }
   </style>
 </head>
